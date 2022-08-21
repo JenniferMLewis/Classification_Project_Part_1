@@ -56,7 +56,7 @@ def dtypes_to_list(df):
             num_type_list.append(column)
     return num_type_list, cat_type_list
 
-# range of vaues in a column
+# range of values in a column
 
 def col_range(df):
     '''
