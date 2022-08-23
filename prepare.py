@@ -39,7 +39,7 @@ def prep_telco(df):
     df = pd.concat( [df, dummy_df], axis=1 )
     df = df[df.total_charges != ' ']
     df['total_charges'] = df.total_charges.astype(float)
-    df = df.drop(columns={'Unnamed: 0', 'customer_id', 'gender', 'partner', 'dependents', 'phone_service', 'multiple_lines', 'online_security', 'online_backup', 'device_protection', 'tech_support', 'streaming_tv', 'streaming_movies', 'paperless_billing', 'churn', 'contract_type', 'payment_type', 'internet_service_type', 'churn_month'})
+    df = df.drop(columns={'Unnamed: 0', 'gender', 'partner', 'dependents', 'phone_service', 'multiple_lines', 'online_security', 'online_backup', 'device_protection', 'tech_support', 'streaming_tv', 'streaming_movies', 'paperless_billing', 'churn', 'contract_type', 'payment_type', 'internet_service_type', 'churn_month'})
     df = df.rename(columns={'churn_encoded' : 'churn'})
     return df
 
